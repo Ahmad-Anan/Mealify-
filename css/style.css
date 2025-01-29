@@ -1,0 +1,382 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    width: 90%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
+
+/* ^ start home secion */
+
+.home {
+    padding: 50px 0px;
+    background-color: #EEEEEE;
+}
+.w-100{
+    width: 100%;
+}
+
+.home .home-info{
+    text-align: center;
+}
+
+.home .home-info h1{
+    font-size: 50px;
+    font-family: sans-serif;
+    padding: 20px 0px;
+
+}
+
+.home .home-info p{
+    font-size: 20px;
+    color: #37373f;
+}
+
+.home .home-info .anchor-home{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    /* gap: 20px 40px; */
+}
+
+.home .home-info .anchor-home .book{
+    background-color: #CE1213;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 20px;
+    color: #fff;
+}
+.home .home-info .anchor-home .watch{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.home .home-info .anchor-home .watch .watch-text{
+    font-weight: 700;
+}
+
+
+.home .home-info .anchor-home .watch .icon-watch{
+    width: 50px;
+    height: 50px;
+    background: rgb(206,18,17);
+    background: linear-gradient(90deg, rgba(206,18,17,1) 50%, rgba(238,238,238,1) 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.home .home-info .anchor-home .watch .icon-watch i{
+    background-color: #fff;
+    /* padding: 15px; */
+    display: inline-block;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+
+
+.home .home-img img:hover{
+    animation: vibrate 0.5s infinite;
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-2px, 2px) rotate(-1deg);
+    }
+    40% {
+        transform: translate(-2px, -2px) rotate(1deg);
+    }
+    60% {
+        transform: translate(2px, 2px) rotate(0deg);
+    }
+    80% {
+        transform: translate(2px, -2px) rotate(1deg);
+    }
+    100% {
+        transform: translate(0) rotate(-1deg);
+    }
+}
+
+
+@media screen and (min-width: 992px) {
+    .home .container{
+        display: flex;
+        flex-direction: row-reverse;
+
+        align-items: center;
+        column-gap: 30px;
+    }
+
+    .home .home-info{
+        text-align: start;
+    }
+
+    .home .home-info .anchor-home{
+        margin-top: 20px;
+        display: flex;
+        justify-content: start;
+        column-gap: 20px;
+        /* gap: 20px 40px; */
+    }
+
+
+}
+
+
+
+/* ^  end home secion */
+
+
+
+.header{
+    padding: 20px;
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul{
+    list-style: none;
+}
+.header .container ul{
+    /* display: flex; */
+    /* column-gap: 20px; */
+    display: none;
+}
+
+
+.header .nav-logo{
+    font-size: 30px;
+    font-weight: 700;
+    /* font-family: cursive; */
+}
+
+.header .nav-logo span{
+    color: #CE1213;
+}
+
+.header .nav-icons i{
+    font-size: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+    .header .container ul{
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+    }
+    .header .container ul a{
+        font-size: 20px;
+        font-weight: 600;
+        color: #00000091;
+        transition: 0.5s;
+        position: relative;
+    }
+
+    .header .container ul li{
+        transition: 0.5s;
+    }
+    .header .container ul li:hover a {
+        color: #000;
+    }
+
+    .header .container ul a::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        width: 0;
+        background-color: #CE1213;
+        transition: all 0.5s;
+    }
+    .header .container ul li a:hover::before{
+        width: 100%;   
+        transition: 0.5s;
+    }
+
+
+    
+}
+/* ^ end header */
+
+
+
+
+
+/* ^ start CHEF */
+.chefs {
+    padding-block: 50px;
+  }
+  .chefs .container {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .chefs .chef {
+    width: calc(calc(100% - (30px * 2)) / 3);
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.8s;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .chef h3 {
+    margin-block: 10px;
+  }
+  .chefs p {
+    color: #7f7f90;
+    padding-inline: 20px;
+    margin-block: 10px;
+    line-height: 22px;
+  }
+  
+  .chefs img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .chef_img {
+    position: relative;
+  }
+  
+  .chef_img::before {
+    content: "";
+    width: 100%;
+    height: 50px;
+    background-image: url("../images/wave.svg");
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .chef:hover {
+    transform: scale(1.07);
+  }
+  
+  .chef .media {
+    position: absolute;
+    top: 30px;
+    right: -30%;
+    transition: all 1s;
+  }
+  
+  .chef ul {
+    background-color: #ffffff4d;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  .chef li {
+    margin-bottom: 10px;
+  }
+  
+  .chef ul i {
+    color: #37373f66;
+    transition: all 1s;
+  }
+  
+  .chef:hover .media {
+    right: 10px;
+  }
+  
+  .chef .media i:hover {
+    color: black;
+  }
+  
+/* ^ end CHEF */
+
+
+
+
+
+
+
+
+/* ^ start Gallary */
+
+
+.gallary{
+    padding: 50px 0px;
+}
+
+.gallary .box{
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.gallary .box .overlay-gallary{
+    position: absolute;
+    top: 200%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #00000075;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.gallary .box:hover  .overlay-gallary{
+    top: 0;
+    opacity: 1;
+}
+
+.gallary .gallary-box{
+    columns: 3;
+    column-gap: 25px;
+}
+
+
+@media screen and (max-width: 992px){
+    .gallary .gallary-box{
+        columns: 2;
+    }
+}
+@media screen and (max-width: 786px){
+    .gallary .gallary-box{
+        columns: 1;
+    }
+}
+
+
+
+.box .image-gallary{
+    position: relative;
+}
+.box .image-gallary svg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+}
+
+/* ^ end Gallary */
